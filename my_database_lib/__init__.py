@@ -1,1 +1,7 @@
-from .models import db, User, Todo, SQLALCHEMY_DATABASE_URI, SQLALCHEMY_TRACK_MODIFICATIONS, SECRET_KEY
+from flask_sqlalchemy import SQLAlchemy
+
+SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:root@localhost:5432/database'
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+SECRET_KEY = "secretkey"
+
+db = SQLAlchemy()

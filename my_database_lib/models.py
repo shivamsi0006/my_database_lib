@@ -1,11 +1,4 @@
-import os
-from flask_sqlalchemy import SQLAlchemy
-
-SQLALCHEMY_DATABASE_URI = os.getenv('SQLALCHEMY_DATABASE_URI')
-SQLALCHEMY_TRACK_MODIFICATIONS = os.getenv('SQLALCHEMY_TRACK_MODIFICATIONS') == 'True'
-SECRET_KEY = os.getenv('SECRET_KEY')
-
-db = SQLAlchemy()
+from . import db
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
